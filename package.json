@@ -1,0 +1,20 @@
+{
+  "name": "url-shortener",
+  "version": "0.1.0",
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.0",
+    "sass": "^1.49.9"
+  },
+  "scripts": {
+    "compile:jsx": "react-scripts start",
+    "watch:sass": "sass --watch --no-source-map styles/sass:styles/css",
+
+    "start": "npm-run-all --parallel watch:sass compile:jsx",
+    "build": "react-scripts build"
+  },
+  "author": "Praveen Perumal (@solvedbiscuit71)",
+  "license": "IST"
+}
