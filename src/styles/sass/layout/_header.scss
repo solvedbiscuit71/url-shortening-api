@@ -1,0 +1,27 @@
+@use "../abstracts/colors";
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  position: relative;
+  z-index: 5;
+
+  padding-inline: 8vw;
+  padding-top: 5vh;
+
+  .hamburger {
+    position: absolute;
+    z-index: 6;
+
+    top: 5vh;
+    right: 8vw;
+
+    fill: var(--para-color)
+  }
+}
+
+.navbar {
+  display: none;
+}

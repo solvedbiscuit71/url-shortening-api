@@ -1,6 +1,8 @@
+import Header from "./components/Header";
+
 function App(props) {
   return (
-    <h1>UrlShortener</h1>
+    <Header />
   );
 }
 

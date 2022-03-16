@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+:root {
+  font-family: 'Poppins';
+}
+
+$font-h1: 32px;
+$font-h2: 20px;
+$font-h3: 18px;
+
+$font-p: 16px;
+$font-span: 10px;
+
+h1,h2,h3 {
+  font-weight: 700;
+}
+
+p,span {
+  font-weight: 500;
+}
+
+h1 { font-size: $font-h1; }
+h2 { font-size: $font-h2; }
+h3 { font-size: $font-h3; }
+p { font-size: $font-p; }
+span { font-size: $font-span; }

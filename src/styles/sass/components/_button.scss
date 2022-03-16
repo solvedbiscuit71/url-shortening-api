@@ -1,0 +1,22 @@
+@use "../abstracts/fonts";
+@use "../abstracts/colors";
+
+.btn--link {
+  font-size: fonts.$font-h3;
+  font-weight: 700;
+  color: white;
+
+  background-color: transparent;
+  border: none;
+}
+
+.btn--primary {
+  font-size: fonts.$font-h3;
+  font-weight: 700;
+  color: white;
+
+  background-color: var(--cyan);
+  border: none;
+  border-radius: 20px;
+  padding: .6em 1em;
+}
