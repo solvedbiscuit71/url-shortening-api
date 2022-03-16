@@ -1,0 +1,8 @@
+# Folder to ignore
+build/
+design/
+node_modules/
+
+# Files to ignore
+package-lock.json
+.DS_Store
