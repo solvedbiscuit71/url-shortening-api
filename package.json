@@ -10,11 +10,22 @@
   },
   "scripts": {
     "compile:jsx": "react-scripts start",
-    "watch:sass": "sass --watch --no-source-map styles/sass:styles/css",
-
+    "watch:sass": "sass --watch --no-source-map src/styles/sass:src/styles/css",
     "start": "npm-run-all --parallel watch:sass compile:jsx",
     "build": "react-scripts build"
   },
   "author": "Praveen Perumal (@solvedbiscuit71)",
-  "license": "IST"
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
