@@ -1,3 +1,5 @@
+import Cards from "./components/Cards";
+import Card from "./components/Cards/Card";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Shortener from "./components/Shortener";
@@ -18,6 +20,14 @@ function App(props) {
       </section>
 
       <Shortener />
+
+      <section className="statistics">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+
+        <Cards />
+      </section>
+
       <Footer />
     </>
   );

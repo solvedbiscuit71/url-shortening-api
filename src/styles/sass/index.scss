@@ -3,11 +3,13 @@
 
 @use "./components/shortener-input";
 @use "./components/shortend";
+@use "./components/card";
 @use "./components/footer-nav";
 
 @use "./layout/header";
 @use "./layout/hero";
 @use "./layout/shortener";
+@use "./layout/statistics";
 @use "./layout/footer";
 
 body {
