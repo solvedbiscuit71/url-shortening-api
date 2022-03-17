@@ -425,15 +425,37 @@ ul.nav-list li {
     text-decoration: underline;
   }
 
+  .footer-nav h3, .footer-nav li {
+    text-align: left;
+  }
+  .footer-nav li:hover {
+    cursor: pointer;
+    color: var(--cyan);
+  }
+
   .header {
     flex-flow: row nowrap;
-    padding: 3em 10vw;
+    padding: 3em 10vw 3em 12vw;
   }
   .header .navbar {
     flex: 1;
   }
   .header .hamburger {
     display: none;
+  }
+
+  .footer {
+    flex-flow: row nowrap;
+    padding: 3em 10vw 3em 12vw;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer .logo {
+    flex-basis: 25%;
+  }
+  .footer .footer-media svg:hover path {
+    cursor: pointer;
+    fill: var(--cyan);
   }
 }
 body {

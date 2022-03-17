@@ -57,10 +57,21 @@
     }
   }
 
+  .footer-nav {
+    h3,li {
+      text-align: left;
+    }
+
+    li:hover {
+      cursor: pointer;
+      color: var(--cyan);
+    }
+  }
+
   // layouts
   .header {
     flex-flow: row nowrap;
-    padding: 3em 10vw;
+    padding: 3em 10vw 3em 12vw;
 
     .navbar {
       flex: 1;
@@ -68,6 +79,22 @@
 
     .hamburger {
       display: none;
+    }
+  }
+
+  .footer {
+    flex-flow: row nowrap;
+    padding: 3em 10vw 3em 12vw;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .logo {
+      flex-basis: 25%;
+    }
+
+    .footer-media svg:hover path {
+      cursor: pointer;
+      fill: var(--cyan);
     }
   }
 }
