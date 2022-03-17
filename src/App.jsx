@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Shortener from "./components/Shortener";
 
 function App(props) {
   return (
@@ -16,6 +17,7 @@ function App(props) {
         <button className="btn--primary">Get Started</button>
       </section>
 
+      <Shortener />
       <Footer />
     </>
   );

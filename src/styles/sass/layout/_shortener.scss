@@ -1,0 +1,29 @@
+.shortener::before {
+  position: absolute;
+  z-index: 6;
+
+  content: "";
+  width: 100%;
+  height: 150px;
+  background-color: white;
+
+  top: 0;
+  left: 0;
+}
+
+.shortener {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  padding: 0 5vw 8vh;
+  background-color: var(--main-bg);
+
+  position: relative;
+  z-index: 5;
+}
+
+.shortener>div {
+  position: relative;
+  z-index: 7;
+}

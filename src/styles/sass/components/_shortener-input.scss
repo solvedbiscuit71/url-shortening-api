@@ -1,0 +1,53 @@
+@use "../abstracts/fonts";
+
+.shortener-input {
+  padding: 2em 1.5em;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  background-color: var(--violet);
+  background-image: url("../../../public/assets/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  input {
+    padding: 12px 12px;
+    width: 100%;
+
+    display: block;
+    box-sizing: border-box;
+
+    border: 3px solid transparent;
+    border-radius: 5px;
+
+    font-family: 'Poppins';
+    font-size: fonts.$font-p;
+  }
+
+  input.show-warning {
+    border-color: hsl(0, 87%, 67%);
+  }
+
+  span {
+    color: hsl(0, 87%, 67%);
+
+    font-size: .8rem;
+    font-style: italic;
+
+    margin-top: .5em;
+    display: block;
+  }
+
+  input:focus {
+    border-color: dodgerblue;
+    outline: none;
+  }
+
+  button {
+    border-radius: 5px;
+    padding: 16px;
+  }
+}

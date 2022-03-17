@@ -1,0 +1,31 @@
+.shortend {
+  padding: 2em 1.5em;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  background-color: white;
+
+  p { margin: 0; }
+
+  .seperator {
+    width: 100%;
+    background-color: var(--main-bg);
+  }
+}
+
+.shortend-url-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .shortend-url {
+    color: var(--cyan);
+  }
+
+  button {
+    border-radius: 5px;
+  }
+}

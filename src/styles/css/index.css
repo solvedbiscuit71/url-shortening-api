@@ -98,6 +98,84 @@ ul.nav-list li {
   padding: 0.6em 1em;
 }
 
+.btn--secondary {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background-color: var(--dark-violet);
+  border: none;
+  border-radius: 20px;
+  padding: 0.6em 1em;
+}
+
+.shortener-input {
+  padding: 2em 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--violet);
+  background-image: url("../../../public/assets/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.shortener-input input {
+  padding: 12px 12px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-size: 16px;
+}
+.shortener-input input.show-warning {
+  border-color: #f46262;
+}
+.shortener-input span {
+  color: #f46262;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.5em;
+  display: block;
+}
+.shortener-input input:focus {
+  border-color: dodgerblue;
+  outline: none;
+}
+.shortener-input button {
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.shortend {
+  padding: 2em 1.5em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: white;
+}
+.shortend p {
+  margin: 0;
+}
+.shortend .seperator {
+  width: 100%;
+  background-color: var(--main-bg);
+}
+
+.shortend-url-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.shortend-url-container .shortend-url {
+  color: var(--cyan);
+}
+.shortend-url-container button {
+  border-radius: 5px;
+}
+
 .footer-nav {
   background-color: var(--footer-bg);
 }
@@ -167,6 +245,32 @@ ul.nav-list li {
   border-radius: 2em;
   display: block;
   margin: 0 auto;
+}
+
+.shortener::before {
+  position: absolute;
+  z-index: 6;
+  content: "";
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  top: 0;
+  left: 0;
+}
+
+.shortener {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0 5vw 8vh;
+  background-color: var(--main-bg);
+  position: relative;
+  z-index: 5;
+}
+
+.shortener > div {
+  position: relative;
+  z-index: 7;
 }
 
 .footer {

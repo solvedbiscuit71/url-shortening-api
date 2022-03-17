@@ -1,9 +1,13 @@
 @use "./components/navbar";
 @use "./components/button";
+
+@use "./components/shortener-input";
+@use "./components/shortend";
 @use "./components/footer-nav";
 
 @use "./layout/header";
 @use "./layout/hero";
+@use "./layout/shortener";
 @use "./layout/footer";
 
 body {

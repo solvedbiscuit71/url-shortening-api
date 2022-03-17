@@ -20,3 +20,14 @@
   border-radius: 20px;
   padding: .6em 1em;
 }
+
+.btn--secondary {
+  font-size: fonts.$font-h3;
+  font-weight: 700;
+  color: white;
+
+  background-color: var(--dark-violet);
+  border: none;
+  border-radius: 20px;
+  padding: .6em 1em;
+}
