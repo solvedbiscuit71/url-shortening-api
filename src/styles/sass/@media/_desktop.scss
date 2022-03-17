@@ -68,6 +68,53 @@
     }
   }
 
+  .shortener-input {
+    padding: 3em 3.5em;
+
+    flex-flow: row nowrap;
+    gap: 2em;
+
+    background-image: url("../../../public/assets/bg-shorten-desktop.svg");
+
+    label {
+      flex-grow: 1;
+
+      input {
+        padding: 16px 30px;
+        font-size: 1.15rem;
+      }
+    }
+
+    button {
+      padding: 16px 32px;
+      border-radius: 10px;
+
+      flex-basis: 180px;
+      font-size: 1.15rem;
+    }
+  }
+
+  .shortend {
+    padding: 16px 30px;
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    p { font-size: 1.25rem; }
+
+    .shortend-url-container {
+      flex-flow: row nowrap;
+      gap: 1.5rem;
+
+      align-items: center;
+      button {
+        width: 100px;
+        text-align: center;
+      }
+    }
+  }
+
   // layouts
   .header {
     flex-flow: row nowrap;
@@ -112,6 +159,15 @@
       margin: 0;
     }
   }
+  
+  .shortener::before {
+    height: 135px;
+  }
+
+  .shortener {
+    padding: 3em 10vw 3em;
+  }
+
 
   .boost {
     max-height: 250px;

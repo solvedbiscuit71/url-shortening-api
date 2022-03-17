@@ -433,6 +433,45 @@ ul.nav-list li {
     color: var(--cyan);
   }
 
+  .shortener-input {
+    padding: 3em 3.5em;
+    flex-flow: row nowrap;
+    gap: 2em;
+    background-image: url("../../../public/assets/bg-shorten-desktop.svg");
+  }
+  .shortener-input label {
+    flex-grow: 1;
+  }
+  .shortener-input label input {
+    padding: 16px 30px;
+    font-size: 1.15rem;
+  }
+  .shortener-input button {
+    padding: 16px 32px;
+    border-radius: 10px;
+    flex-basis: 180px;
+    font-size: 1.15rem;
+  }
+
+  .shortend {
+    padding: 16px 30px;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .shortend p {
+    font-size: 1.25rem;
+  }
+  .shortend .shortend-url-container {
+    flex-flow: row nowrap;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .shortend .shortend-url-container button {
+    width: 100px;
+    text-align: center;
+  }
+
   .header {
     flex-flow: row nowrap;
     padding: 3em 10vw 3em 12vw;
@@ -471,6 +510,14 @@ ul.nav-list li {
   .hero button {
     padding: 1em 2.5em;
     margin: 0;
+  }
+
+  .shortener::before {
+    height: 135px;
+  }
+
+  .shortener {
+    padding: 3em 10vw 3em;
   }
 
   .boost {
