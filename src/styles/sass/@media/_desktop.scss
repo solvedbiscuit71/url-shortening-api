@@ -82,6 +82,49 @@
     }
   }
 
+  .hero {
+    min-height: 480px;
+    padding: 3em 0 3em 12vw;
+
+    background-image: url("../../../public/assets/illustration-working.svg");
+    background-repeat: no-repeat;
+    background-position: top 3em right -8em;
+
+    &__image {
+      height: 100%;
+      display: none;
+    }
+
+    &__content {
+      max-width: 580px;
+    }
+
+    h1,p {
+      padding: 0;
+      text-align: left;
+    }
+
+    h1 { font-size: 4rem; }
+    p { font-size: 1.35rem; }
+
+    button {
+      padding: 1em 2.5em;
+      margin: 0;
+    }
+  }
+
+  .boost {
+    max-height: 250px;
+    padding: 4em 0;
+
+    background-image: url("../../../public/assets/bg-boost-desktop.svg");
+
+    h2 {
+      font-size: 2.25rem;
+      margin: 0 0 22px;
+    }
+  }
+
   .footer {
     flex-flow: row nowrap;
     padding: 3em 10vw 3em 12vw;
