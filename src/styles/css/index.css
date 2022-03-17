@@ -337,6 +337,26 @@ ul.nav-list li {
   z-index: 5;
 }
 
+.boost {
+  padding: 5em 5vw;
+  background-color: var(--violet);
+  background-image: url("../../../public/assets/bg-boost-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+.boost h2 {
+  color: white;
+  font-size: 1.65rem;
+  text-align: center;
+}
+.boost button {
+  display: block;
+  margin: 0 auto;
+  padding: 1em 2em;
+  border-radius: 2em;
+}
+
 .footer {
   display: flex;
   flex-direction: column;

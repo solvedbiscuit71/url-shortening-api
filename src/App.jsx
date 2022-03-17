@@ -21,11 +21,18 @@ function App(props) {
 
       <Shortener />
 
+      {/* Statistics section */}
       <section className="statistics">
         <h2>Advanced Statistics</h2>
         <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
 
         <Cards />
+      </section>
+
+      {/* Boost section */}
+      <section className="boost">
+        <h2>Boost your links today</h2>
+        <button className="btn--primary">Get Started</button>
       </section>
 
       <Footer />
