@@ -1,0 +1,41 @@
+@use "../abstracts/fonts";
+@use "../abstracts/colors";
+
+.hero {
+  padding-left: 5vw;
+  padding-bottom: 8vh;
+  overflow: hidden;
+
+  &__image {
+    height: 340px;
+  }
+
+  h1 {
+    color: var(--header-color);
+    text-align: center;
+
+    font-size: 2.75rem;
+    line-height: calc(1em + 6px);
+
+    padding-right: 5vw;
+    margin: 26px auto;
+  }
+
+  p {
+    color: var(--para-color);
+    text-align: center;
+
+    font-size: 1.15rem;
+
+    padding-right: 5vw;
+    margin: 26px auto;
+  }
+
+  button {
+    padding: .75em 2em;
+    border-radius: 2em;
+
+    display: block;
+    margin: 0 auto;
+  }
+}
