@@ -13,6 +13,8 @@
 @use "./layout/boost";
 @use "./layout/footer";
 
+@use "./@media/desktop";
+
 body {
   margin: 0;
   padding: 0;

@@ -231,8 +231,7 @@ ul.nav-list li {
   gap: 1.5em;
   position: relative;
   z-index: 5;
-  padding-inline: 8vw;
-  padding-block: 5vh;
+  padding: 5vh 8vw;
 }
 .header .hamburger {
   position: absolute;
@@ -380,6 +379,63 @@ ul.nav-list li {
   align-items: center;
 }
 
+@media only screen and (min-width: 1200px) {
+  .seperator {
+    display: none;
+  }
+
+  .btn--primary:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.35) 100%);
+  }
+
+  .navbar {
+    padding: 0;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: unset;
+  }
+  .navbar ul.nav-list li {
+    display: inline-block;
+    margin-top: 0;
+    margin-left: 2em;
+    color: var(--para-color);
+    font-size: 0.9rem;
+  }
+  .navbar ul.nav-list li:hover {
+    cursor: pointer;
+    font-weight: 700;
+    color: black;
+  }
+  .navbar .btn-flex {
+    flex-direction: row;
+    margin: 0;
+  }
+  .navbar .btn-flex button {
+    font-size: 0.9rem;
+    padding: 0.6em 1.2em;
+  }
+  .navbar .btn-flex .btn--link {
+    color: var(--para-color);
+  }
+  .navbar .btn-flex .btn--link:hover {
+    cursor: pointer;
+    color: #2f2d2d;
+    text-decoration: underline;
+  }
+
+  .header {
+    flex-flow: row nowrap;
+    padding: 3em 10vw;
+  }
+  .header .navbar {
+    flex: 1;
+  }
+  .header .hamburger {
+    display: none;
+  }
+}
 body {
   margin: 0;
   padding: 0;

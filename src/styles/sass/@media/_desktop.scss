@@ -1,0 +1,73 @@
+@media only screen and (min-width: 1200px) {
+  // utils classes
+  .seperator {
+    display: none;
+  }
+
+  // components
+  .btn--primary:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right,hsla(0, 0%, 100%, 0.35) 0%,hsla(0, 0%, 100%, 0.35) 100%);
+  }
+
+  .navbar {
+    padding: 0;
+
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: unset;
+
+    ul.nav-list li {
+      display: inline-block;
+      margin-top: 0;
+      margin-left: 2em;
+
+      color: var(--para-color);
+      font-size: .9rem;
+    }
+
+    ul.nav-list li:hover {
+      cursor: pointer;
+
+      font-weight: 700;
+      color: black;
+    }
+
+    .btn-flex {
+      flex-direction: row;
+      margin: 0;
+
+      button {
+        font-size: .9rem;
+        padding: .6em 1.2em;
+      }
+
+      .btn--link {
+        color: var(--para-color);
+      }
+
+      .btn--link:hover {
+        cursor: pointer;
+
+        color: hsl(0, 2%, 18%);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // layouts
+  .header {
+    flex-flow: row nowrap;
+    padding: 3em 10vw;
+
+    .navbar {
+      flex: 1;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+}
