@@ -7,23 +7,7 @@ class Shortener extends Component {
     super(props)
     this.state = {
       showWarning: false,
-      shortendList : [
-        {
-          original: "https://frontendmentor.io/",
-          shortend: "https://rep.ink/Ks83ksg/",
-          copied: false
-        },
-        {
-          original: "https://frontendmentor.io/",
-          shortend: "https://rep.ink/Ks83ksg/",
-          copied: true
-        },
-        {
-          original: "https://frontendmentor.io/",
-          shortend: "https://rep.ink/Ks83ksg/",
-          copied: false
-        }
-      ]
+      shortendList : []
     }
   }
 

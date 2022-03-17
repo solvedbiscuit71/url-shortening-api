@@ -437,8 +437,10 @@ ul.nav-list li {
   .shortener-input {
     padding: 3em 3.5em;
     flex-flow: row nowrap;
+    align-items: flex-start;
     gap: 2em;
     background-image: url("../../../public/assets/bg-shorten-desktop.svg");
+    background-size: cover;
   }
   .shortener-input label {
     flex-grow: 1;
@@ -446,9 +448,11 @@ ul.nav-list li {
   .shortener-input label input {
     padding: 16px 30px;
     font-size: 1.15rem;
+    max-height: 64px;
   }
   .shortener-input button {
     padding: 16px 32px;
+    min-height: 64px;
     border-radius: 10px;
     flex-basis: 180px;
     font-size: 1.15rem;
