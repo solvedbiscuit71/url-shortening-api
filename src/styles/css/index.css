@@ -331,6 +331,7 @@ ul.nav-list li {
   margin: 5em 0 2em;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5em;
   position: relative;
   z-index: 5;
@@ -472,6 +473,24 @@ ul.nav-list li {
     text-align: center;
   }
 
+  .card {
+    padding: 3.75em 2em 2em;
+    max-width: 320px;
+  }
+  .card h3, .card p {
+    text-align: left;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+  }
+  .card p {
+    font-size: 1rem;
+  }
+
+  .card__icon {
+    left: 2.5em;
+  }
+
   .header {
     flex-flow: row nowrap;
     padding: 3em 10vw 3em 12vw;
@@ -518,6 +537,34 @@ ul.nav-list li {
 
   .shortener {
     padding: 3em 10vw 3em;
+  }
+
+  .statistics {
+    padding: 3em 8vw 6em 12vw;
+  }
+  .statistics h2 {
+    font-size: 2.5rem;
+  }
+  .statistics > p {
+    font-size: 1.25rem;
+    padding-inline: 24.5%;
+  }
+  .statistics .card-flex::before {
+    width: 100%;
+    height: 8px;
+    top: calc(45% - 4px);
+    left: 0;
+  }
+  .statistics .card-flex {
+    min-height: 380px;
+    flex-flow: row nowrap;
+    gap: 2em;
+  }
+  .statistics .card-flex .card:first-child {
+    align-self: flex-start;
+  }
+  .statistics .card-flex .card:last-child {
+    align-self: flex-end;
   }
 
   .boost {
