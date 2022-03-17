@@ -1,7 +1,9 @@
 @use "./components/navbar";
 @use "./components/button";
+@use "./components/footer-nav";
 
 @use "./layout/header";
+@use "./layout/footer";
 
 body {
   margin: 0;

@@ -98,6 +98,26 @@ ul.nav-list li {
   padding: 0.6em 1em;
 }
 
+.footer-nav {
+  background-color: var(--footer-bg);
+}
+.footer-nav h3 {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.footer-navlist {
+  list-style: none;
+  margin: 1.5em auto;
+  padding: 0;
+}
+.footer-navlist li {
+  color: var(--para-color);
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -105,7 +125,7 @@ ul.nav-list li {
   position: relative;
   z-index: 5;
   padding-inline: 8vw;
-  padding-top: 5vh;
+  padding-block: 5vh;
 }
 .header .hamburger {
   position: absolute;
@@ -117,6 +137,29 @@ ul.nav-list li {
 
 .navbar {
   display: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  padding: 4em;
+  background-color: var(--footer-bg);
+}
+.footer .logo {
+  display: block;
+  margin-bottom: 2em;
+}
+.footer .logo path {
+  fill: white;
+}
+
+.footer-media {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
 }
 
 body {

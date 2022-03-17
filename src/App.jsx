@@ -1,8 +1,12 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 function App(props) {
   return (
-    <Header />
+    <>
+      <Header />
+      <Footer />
+    </>
   );
 }
 

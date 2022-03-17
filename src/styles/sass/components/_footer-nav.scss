@@ -1,0 +1,26 @@
+@use "../abstracts/fonts";
+@use "../abstracts/colors";
+
+.footer-nav {
+  background-color: var(--footer-bg);
+
+  h3 {
+    color: white;
+    text-align: center;
+
+    margin: 0;
+  }
+}
+
+.footer-navlist {
+  list-style: none;
+
+  margin: 1.5em auto;
+  padding: 0;
+
+  li {
+    color: var(--para-color);
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}

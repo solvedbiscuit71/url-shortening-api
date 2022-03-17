@@ -9,7 +9,7 @@
   z-index: 5;
 
   padding-inline: 8vw;
-  padding-top: 5vh;
+  padding-block: 5vh;
 
   .hamburger {
     position: absolute;
@@ -18,7 +18,7 @@
     top: 5vh;
     right: 8vw;
 
-    fill: var(--para-color)
+    fill: var(--para-color);
   }
 }
 

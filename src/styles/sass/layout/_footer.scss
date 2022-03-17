@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  align-items: center;
+  padding: 4em;
+
+  background-color: var(--footer-bg);
+
+  .logo {
+    path {
+      fill: white;
+    }
+
+    display: block;
+    margin-bottom: 2em;
+  }
+}
+
+.footer-media {
+  display: flex;
+  gap: 1.5em;
+
+  justify-content: center;
+  align-items: center;
+}
