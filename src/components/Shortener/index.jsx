@@ -91,14 +91,14 @@ class Shortener extends Component {
 
   render() {
     return (
-      <section className="shortener">
+      <div className="shortener">
         <ShortenerInput showWarning={this.state.showWarning} warningCode={this.state.warningCode} handleInput={this.handleInput} handleClick={this.handleClick} />
         {
           this.state.shortendList.slice(0).reverse().map(item => {
             return <Shortend original={item.original} shortend={item.shortend} copied={item.copied} handleCopy={this.handleCopy} />
           })
         }
-      </section>
+      </div>
     )
   }
 }
