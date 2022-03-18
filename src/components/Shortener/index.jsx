@@ -15,26 +15,59 @@ class Shortener extends Component {
 
   handleInput = (value) => {
     /* Here, value is the value of the input element in <ShortenerInput />*/
-    if (value === "") {
+    this.setState({
+      showWarning: false,
+      url: value
+    })
+  }
+
+  handleClick = () => {
+    if (this.state.url === "") {
       this.setState({
-        url: value,
         showWarning: true,
         warningCode: 1
       })
-    }else {
-      this.setState({
-        url: value,
-        showWarning: false,
-      })
+      return
     }
+
+    fetch("https://api.shrtco.de/v2/shorten",{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      redirect: 'follow',
+      body: new URLSearchParams({
+        url: this.state.url
+      })
+    })
+      .then(data => data.json())
+      .then(data => {
+        if (data.ok) {
+          this.setState({
+            shortendList: this.state.shortendList.concat({
+              original: data.result.original_link,
+              shortend: data.result.full_short_link,
+              copied: false
+            })
+          })
+        }else {
+          if (data.error_code === 2) {
+            this.setState({
+              showWarning: true,
+              warningCode: 0
+            })
+          }
+        }
+      })
+      .catch(error => console.log(error))
   }
 
   render() {
     return (
       <section className="shortener">
-        <ShortenerInput showWarning={this.state.showWarning} warningCode={this.state.warningCode} handleInput={this.handleInput} />
+        <ShortenerInput showWarning={this.state.showWarning} warningCode={this.state.warningCode} handleInput={this.handleInput} handleClick={this.handleClick} />
         {
-          this.state.shortendList.map(item => {
+          this.state.shortendList.slice(0).reverse().map(item => {
             return <Shortend original={item.original} shortend={item.shortend} copied={item.copied} />
           })
         }

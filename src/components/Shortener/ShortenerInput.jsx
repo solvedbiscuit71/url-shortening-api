@@ -10,7 +10,7 @@ function ShortenerInput(props) {
         </p>
       </label>
 
-      <button className="btn--primary">Shorten It!</button>
+      <button onClick={props.handleClick} className="btn--primary">Shorten It!</button>
     </div>
   );
 }

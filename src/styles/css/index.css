@@ -313,11 +313,14 @@ ul.nav-list li {
 .shortener {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
   padding: 0 5vw 8vh;
   background-color: var(--main-bg);
   position: relative;
   z-index: 5;
+}
+.shortener .shortener-input {
+  margin-bottom: 1em;
 }
 
 .shortener > div {
@@ -354,6 +357,7 @@ ul.nav-list li {
 .card-flex {
   margin: 5em 0 2em;
   display: flex;
+  box-sizing: content-box;
   flex-direction: column;
   align-items: center;
   gap: 5em;
@@ -494,7 +498,9 @@ ul.nav-list li {
   .shortend .shortend-url-container {
     flex-flow: row nowrap;
     gap: 1.5rem;
+    min-width: 420px;
     align-items: center;
+    justify-content: flex-end;
   }
   .shortend .shortend-url-container button {
     width: 100px;
@@ -619,6 +625,14 @@ ul.nav-list li {
     fill: var(--cyan);
   }
 }
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;

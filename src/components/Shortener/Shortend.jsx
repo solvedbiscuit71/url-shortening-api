@@ -16,8 +16,8 @@ function Shortend(props) {
         <p className="shortend-url">{props.shortend}</p>
         {
           props.copied ?
-          <button className="btn--primary">Copy</button> :
-          <button className="btn--secondary">Copied!</button>
+          <button className="btn--secondary">Copied!</button> :
+          <button className="btn--primary">Copy</button>
         }
       </div>
     </div>

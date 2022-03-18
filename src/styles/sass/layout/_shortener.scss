@@ -14,7 +14,11 @@
 .shortener {
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
+
+  .shortener-input {
+    margin-bottom: 1em;
+  }
 
   padding: 0 5vw 8vh;
   background-color: var(--main-bg);
