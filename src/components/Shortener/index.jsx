@@ -62,17 +62,28 @@ class Shortener extends Component {
       .catch(error => console.log(error))
   }
 
+  handleCopy = (copyText) => {
+    navigator.clipboard.writeText(copyText)
+
+    const newList = this.state.shortendList.slice(0);
+    newList.forEach(item => {
+      if (item.shortend === copyText) {
+        item.copied = true;
+      }
+    })
+    this.setState({ shortendList: newList })
+  }
+
   render() {
     return (
       <section className="shortener">
         <ShortenerInput showWarning={this.state.showWarning} warningCode={this.state.warningCode} handleInput={this.handleInput} handleClick={this.handleClick} />
         {
           this.state.shortendList.slice(0).reverse().map(item => {
-            return <Shortend original={item.original} shortend={item.shortend} copied={item.copied} />
+            return <Shortend original={item.original} shortend={item.shortend} copied={item.copied} handleCopy={this.handleCopy} />
           })
         }
       </section>
-
     )
   }
 }

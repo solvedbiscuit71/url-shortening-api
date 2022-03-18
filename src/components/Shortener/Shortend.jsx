@@ -17,7 +17,7 @@ function Shortend(props) {
         {
           props.copied ?
           <button className="btn--secondary">Copied!</button> :
-          <button className="btn--primary">Copy</button>
+          <button className="btn--primary" onClick={() => props.handleCopy(props.shortend)}>Copy</button>
         }
       </div>
     </div>
