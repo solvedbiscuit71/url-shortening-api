@@ -188,6 +188,12 @@ ul.nav-list li {
   background-color: var(--main-bg);
 }
 
+.original-url {
+  width: 100%;
+  max-height: 25px;
+  overflow-y: auto;
+}
+
 .shortend-url-container {
   display: flex;
   flex-direction: column;
@@ -494,6 +500,11 @@ ul.nav-list li {
   }
   .shortend p {
     font-size: 1.25rem;
+  }
+  .shortend p.original-url {
+    width: 100%;
+    max-height: 32px;
+    overflow-y: auto;
   }
   .shortend .shortend-url-container {
     flex-flow: row nowrap;

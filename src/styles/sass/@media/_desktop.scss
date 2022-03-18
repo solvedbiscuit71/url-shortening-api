@@ -108,6 +108,12 @@
 
     p { font-size: 1.25rem; }
 
+    p.original-url {
+      width: 100%;
+      max-height: 32px;
+      overflow-y: auto;
+    }
+
     .shortend-url-container {
       flex-flow: row nowrap;
       gap: 1.5rem;
