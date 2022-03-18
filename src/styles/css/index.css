@@ -119,10 +119,10 @@ ul.nav-list li {
   background-repeat: no-repeat;
   background-position: top right;
 }
-.shortener-input label {
+.shortener-input .input-container {
   position: relative;
 }
-.shortener-input label input {
+.shortener-input .input-container input {
   padding: 12px 12px;
   width: 100%;
   display: block;
@@ -132,10 +132,10 @@ ul.nav-list li {
   font-family: "Poppins";
   font-size: 16px;
 }
-.shortener-input label input.show-warning {
+.shortener-input .input-container input.show-warning {
   border-color: #f46262;
 }
-.shortener-input label div::before {
+.shortener-input .input-container div::before {
   content: "";
   width: calc(100% + 1em);
   height: 3px;
@@ -145,7 +145,7 @@ ul.nav-list li {
   left: -0.5em;
   z-index: 4;
 }
-.shortener-input label div {
+.shortener-input .input-container div {
   position: absolute;
   top: -0.5em;
   left: 1.15em;
@@ -153,18 +153,18 @@ ul.nav-list li {
   margin: 0;
   width: fit-content;
 }
-.shortener-input label div span {
+.shortener-input .input-container div span {
   color: #f46262;
   font-size: 0.8rem;
   position: relative;
   top: -0.05em;
   z-index: 6;
 }
-.shortener-input label input:focus {
+.shortener-input .input-container input:focus {
   border-color: dodgerblue;
   outline: none;
 }
-.shortener-input label input:focus + div {
+.shortener-input .input-container input:focus + div {
   display: none !important;
 }
 .shortener-input button {
@@ -476,10 +476,10 @@ ul.nav-list li {
     background-image: url("../../../public/assets/bg-shorten-desktop.svg");
     background-size: cover;
   }
-  .shortener-input label {
+  .shortener-input .input-container {
     flex-grow: 1;
   }
-  .shortener-input label input {
+  .shortener-input .input-container input {
     padding: 16px 30px;
     font-size: 1.15rem;
     max-height: 64px;
