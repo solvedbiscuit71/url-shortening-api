@@ -119,7 +119,10 @@ ul.nav-list li {
   background-repeat: no-repeat;
   background-position: top right;
 }
-.shortener-input input {
+.shortener-input label {
+  position: relative;
+}
+.shortener-input label input {
   padding: 12px 12px;
   width: 100%;
   display: block;
@@ -129,19 +132,40 @@ ul.nav-list li {
   font-family: "Poppins";
   font-size: 16px;
 }
-.shortener-input input.show-warning {
+.shortener-input label input.show-warning {
   border-color: #f46262;
 }
-.shortener-input span {
+.shortener-input label p::before {
+  content: "";
+  width: calc(100% + 1em);
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  top: 32.5%;
+  left: -0.5em;
+  z-index: 4;
+}
+.shortener-input label p {
+  position: absolute;
+  top: -0.5em;
+  left: 1.15em;
+  z-index: 5;
+  margin: 0;
+  width: fit-content;
+}
+.shortener-input label p span {
   color: #f46262;
   font-size: 0.8rem;
-  font-style: italic;
-  margin-top: 0.5em;
-  display: block;
+  position: relative;
+  top: -0.05em;
+  z-index: 6;
 }
-.shortener-input input:focus {
+.shortener-input label input:focus {
   border-color: dodgerblue;
   outline: none;
+}
+.shortener-input label input:focus + p {
+  display: none !important;
 }
 .shortener-input button {
   border-radius: 5px;

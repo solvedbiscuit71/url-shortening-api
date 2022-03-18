@@ -13,37 +13,65 @@
   background-repeat: no-repeat;
   background-position: top right;
 
-  input {
-    padding: 12px 12px;
-    width: 100%;
+  label {
+    position: relative;
+    input {
+      padding: 12px 12px;
+      width: 100%;
 
-    display: block;
-    box-sizing: border-box;
+      display: block;
+      box-sizing: border-box;
 
-    border: 3px solid transparent;
-    border-radius: 5px;
+      border: 3px solid transparent;
+      border-radius: 5px;
 
-    font-family: 'Poppins';
-    font-size: fonts.$font-p;
-  }
+      font-family: 'Poppins';
+      font-size: fonts.$font-p;
+    }
 
-  input.show-warning {
-    border-color: hsl(0, 87%, 67%);
-  }
+    input.show-warning {
+      border-color: hsl(0, 87%, 67%);
+    }
 
-  span {
-    color: hsl(0, 87%, 67%);
+    p::before {
+      content: "";
+      width: calc(100% + 1em);
+      height: 3px;
+      background-color: white;
 
-    font-size: .8rem;
-    font-style: italic;
+      position: absolute;
+      top: 32.5%;
+      left: -.5em;
+      z-index: 4;
+    }
 
-    margin-top: .5em;
-    display: block;
-  }
+    p {
+      position: absolute;
+      top: -.5em;
+      left: 1.15em;
 
-  input:focus {
-    border-color: dodgerblue;
-    outline: none;
+      z-index: 5;
+      margin: 0;
+      width: fit-content;
+
+      span {
+        color: hsl(0, 87%, 67%);
+        font-size: .8rem;
+
+        position: relative;
+        top: -.05em;
+        z-index: 6;
+      }
+    }
+
+    input:focus {
+      border-color: dodgerblue;
+      outline: none;
+
+      +p {
+        display: none !important;
+      }
+    }
   }
 
   button {
