@@ -24,7 +24,7 @@ function Cards(props) {
 
   return (
     <div className="card-flex">
-      {cards.map(card => { return <Card image={card.image} alt={card.alt} title={card.title} content={card.content} /> }) }
+      {cards.map(card => { return <Card key={card.title} image={card.image} alt={card.alt} title={card.title} content={card.content} /> }) }
     </div>
   );
 }

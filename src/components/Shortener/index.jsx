@@ -9,7 +9,7 @@ class Shortener extends Component {
       showWarning: false,
       warningCode: 1, // can take either zero(invalid url) or one(url empty).
       url: "",
-      shortendList : []
+      shortendList: []
     }
   }
 
@@ -30,7 +30,7 @@ class Shortener extends Component {
       return
     }
 
-    fetch("https://api.shrtco.de/v2/shorten",{
+    fetch("https://api.shrtco.de/v2/shorten", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
@@ -43,14 +43,17 @@ class Shortener extends Component {
       .then(data => data.json())
       .then(data => {
         if (data.ok) {
-          this.setState({
-            shortendList: this.state.shortendList.concat({
-              original: data.result.original_link,
-              shortend: data.result.full_short_link,
-              copied: false
-            })
+          const newList = this.state.shortendList.concat({
+            original: data.result.original_link,
+            shortend: data.result.full_short_link,
+            copied: false
           })
-        }else {
+          localStorage.setItem('shortendList', JSON.stringify(newList));
+
+          this.setState({
+            shortendList: newList
+          })
+        } else {
           if (data.error_code === 2) {
             this.setState({
               showWarning: true,
@@ -71,7 +74,19 @@ class Shortener extends Component {
         item.copied = true;
       }
     })
-    this.setState({ shortendList: newList })
+    localStorage.setItem('shortendList', JSON.stringify(newList));
+    this.setState({
+      shortendList: newList
+    })
+  }
+
+  componentDidMount() {
+    const newList = JSON.parse(localStorage.getItem('shortendList'))
+    if (newList) {
+      this.setState({
+        shortendList: newList
+      })
+    }
   }
 
   render() {
@@ -87,5 +102,5 @@ class Shortener extends Component {
     )
   }
 }
- 
+
 export default Shortener;
